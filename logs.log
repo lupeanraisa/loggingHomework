@@ -1,0 +1,28 @@
+Jul 17, 2026 2:39:34 PM Main main
+CONFIG: Application starting up
+Jul 17, 2026 2:39:34 PM Main main
+CONFIG: Database URL = jdbc:postgresql://localhost:5432/mydb
+Jul 17, 2026 2:39:34 PM Main main
+CONFIG: Max connection pool size = 10
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Processing order: ORD-1234
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Entering processOrder(orderId=ORD-1234, quantity=3)
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Starting input validation for order ORD-1234
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Validation passed
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Price per unit: 29.99, computed total: 89.97
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Saving order ORD-1234 to database
+Jul 17, 2026 2:39:34 PM Main saveToDatabase
+INFO: Executing INSERT for order ORD-1234 with total 89.97
+Jul 17, 2026 2:39:34 PM Main saveToDatabase
+INFO: SQL: INSERT INTO orders (id, total) VALUES ('ORD-1234', 89.97)
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Order ORD-1234 processed successfully — total: $89.97
+Jul 17, 2026 2:39:34 PM Main processOrder
+INFO: Exiting processOrder()
+Jul 17, 2026 2:39:34 PM Main main
+INFO: Application shutting down
