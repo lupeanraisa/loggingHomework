@@ -27,7 +27,7 @@ public class Main {
 //        System.out.println("Database URL = jdbc:postgresql://localhost:5432/mydb");
 //        System.out.println("Max connection pool size = 10");
 //        System.out.println(System.getProperty("user.dir"));
-        LOGGER.config("Application starting up");
+        LOGGER.info("Application starting up");
         LOGGER.config("Database URL = jdbc:postgresql://localhost:5432/mydb");
         LOGGER.config("Max connection pool size = 10");
 
@@ -49,7 +49,7 @@ public class Main {
         LOGGER.info("Starting input validation for order " + orderId);
         if (quantity <= 0) {
 //            System.out.println("Invalid quantity (" + quantity + ") for order " + orderId);
-            LOGGER.severe("Invalid quantity (" + quantity + ") for order " + orderId);
+            LOGGER.warning("Invalid quantity (" + quantity + ") for order " + orderId);
             return;
         }
         LOGGER.info("Validation passed");
@@ -84,7 +84,7 @@ public class Main {
 //        System.out.println("Executing INSERT for order " + orderId + " with total " + total);
 //        System.out.println("SQL: INSERT INTO orders (id, total) VALUES ('" + orderId + "', " + total + ")");
 
-        LOGGER.info("Executing INSERT for order " + orderId + " with total " + total);
-        LOGGER.info("SQL: INSERT INTO orders (id, total) VALUES ('" + orderId + "', " + total + ")");
+        LOGGER.fine("Executing INSERT for order " + orderId + " with total " + total);
+        LOGGER.fine("SQL: INSERT INTO orders (id, total) VALUES ('" + orderId + "', " + total + ")");
     }
 }
